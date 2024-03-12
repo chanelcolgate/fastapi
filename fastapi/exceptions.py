@@ -53,6 +53,7 @@ class HTTPException(StarletteHTTPException):
                 """
             ),
         ] = None,
+        result: str,
         headers: Annotated[
             Optional[Dict[str, str]],
             Doc(
