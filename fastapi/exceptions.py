@@ -53,7 +53,15 @@ class HTTPException(StarletteHTTPException):
                 """
             ),
         ] = None,
-        result: str,
+        result: Annotated[
+            Any,
+            Doc(
+                """
+                Any data to be sent to the client in the `detail` key of the JSON
+                response.
+                """
+            ),
+        ] = None,
         headers: Annotated[
             Optional[Dict[str, str]],
             Doc(
